@@ -436,13 +436,38 @@ namespace System.Numerics
                     // len++;
 
                     /*
-                     * Span IndexOf with optimized no zeroes
+                     * Span IndexOf with optimized "no zeroes"
+                     */
+                    // int len = val.Length;
+                    // if (val[len - 1] == 0)
+                    // {
+                    //     len = val.AsSpan().LastIndexOfAnyExcept((uint)0);
+                    //     len++;
+                    // }
+
+                    /*
+                     * Span IndexOf with optimized "no zeroes" and "up to 3 zeroes"
                      */
                     int len = val.Length;
                     if (val[len - 1] == 0)
                     {
-                        len = val.AsSpan().LastIndexOfAnyExcept((uint)0);
-                        len++;
+                        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+                        bool IsPreviousElementZeroAfterDecrementLenSideeffect()
+                        {
+                            len--;
+                            return len > 0 && val[len - 1] == 0;
+                        }
+                        if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+                        {
+                            if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+                            {
+                                if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+                                {
+                                    len = val.AsSpan().LastIndexOfAnyExcept((uint)0);
+                                    len++;
+                                }
+                            }
+                        }
                     }
 
                     if (len == 1)

@@ -45,4 +45,35 @@ public class Implementations
         }
         return len;
     }
+
+    /// <summary>
+    /// find len replaced by Span method with optimized "no zeroes" and up to 3 zeroes cases
+    /// </summary>
+    /// <param name="val"></param>
+    /// <returns></returns>
+    public static int UsingLastIndexOfAnyExcept_WithOptimizedUpTo3Zeroes(uint[] val)
+    {
+        int len = val.Length;
+        if (val[len - 1] == 0)
+        {
+            [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+            bool IsPreviousElementZeroAfterDecrementLenSideeffect()
+            {
+                len--;
+                return len > 0 && val[len - 1] == 0;
+            }
+            if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+            {
+                if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+                {
+                    if (IsPreviousElementZeroAfterDecrementLenSideeffect())
+                    {
+                        len = val.AsSpan().LastIndexOfAnyExcept((uint)0);
+                        len++;
+                    }
+                }
+            }
+        }
+        return len;
+    }
 }

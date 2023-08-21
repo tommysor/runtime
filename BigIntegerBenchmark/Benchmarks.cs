@@ -9,7 +9,7 @@ namespace BigIntegerBenchmark;
 [MemoryDiagnoser]
 public class Benchmarks
 {
-    [Params(0, 1, 2, 4, 5, 32, 64)]
+    [Params(0, 1, 2, 3, 4, 7, 8, 32, 64)]
     public int NumberOfZeroElements { get; set; }
     private const int ArrayLength = 256;
     private Random _random = null!;
@@ -51,15 +51,21 @@ public class Benchmarks
         return Implementations.Current(_input);
     }
 
-    [Benchmark]
-    public int SpanIndexOf()
-    {
-        return Implementations.UsingLastIndexOfAnyExcept(_input);
-    }
+    // [Benchmark]
+    // public int SpanIndexOf()
+    // {
+    //     return Implementations.UsingLastIndexOfAnyExcept(_input);
+    // }
 
     [Benchmark]
     public int SpanIndexOfOpt()
     {
         return Implementations.UsingLastIndexOfAnyExcept_WithOptimizedNoZeroes(_input);
+    }
+
+    [Benchmark]
+    public int SpanIndexOfOpt3()
+    {
+        return Implementations.UsingLastIndexOfAnyExcept_WithOptimizedUpTo3Zeroes(_input);
     }
 }

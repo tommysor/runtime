@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>BigIntegerBenchmark.Benchmarks-20230820-124015</title>
+<title>BigIntegerBenchmark.Benchmarks-20230821-173337</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,29 +22,35 @@ AMD EPYC 7763, 1 CPU, 4 logical and 2 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>  Method</th><th>NumberOfZeroElements</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th><th>Alloc Ratio</th>
+<thead><tr><th>   Method</th><th>NumberOfZeroElements</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th><th>Alloc Ratio</th>
 </tr>
-</thead><tbody><tr><td>Current</td><td>0</td><td>0.3356 ns</td><td>0.0261 ns</td><td>0.0244 ns</td><td>0.3308 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>0</td><td>2.1166 ns</td><td>0.0161 ns</td><td>0.0135 ns</td><td>2.1201 ns</td><td>6.35</td><td>0.36</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>0</td><td>0.3846 ns</td><td>0.0234 ns</td><td>0.0207 ns</td><td>0.3780 ns</td><td>1.14</td><td>0.11</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>1</td><td>1.2683 ns</td><td>0.0322 ns</td><td>0.0302 ns</td><td>1.2552 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>1</td><td>2.1783 ns</td><td>0.0754 ns</td><td>0.0705 ns</td><td>2.1786 ns</td><td>1.72</td><td>0.05</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>1</td><td>2.4456 ns</td><td>0.0527 ns</td><td>0.0440 ns</td><td>2.4341 ns</td><td>1.93</td><td>0.05</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>2</td><td>1.5833 ns</td><td>0.0234 ns</td><td>0.0207 ns</td><td>1.5852 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>2</td><td>2.1301 ns</td><td>0.0361 ns</td><td>0.0301 ns</td><td>2.1251 ns</td><td>1.35</td><td>0.02</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>2</td><td>2.4193 ns</td><td>0.0268 ns</td><td>0.0237 ns</td><td>2.4154 ns</td><td>1.53</td><td>0.03</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>4</td><td>2.4688 ns</td><td>0.0624 ns</td><td>0.0553 ns</td><td>2.4572 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>4</td><td>2.1418 ns</td><td>0.0470 ns</td><td>0.0417 ns</td><td>2.1334 ns</td><td>0.87</td><td>0.03</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>4</td><td>2.4967 ns</td><td>0.0658 ns</td><td>0.0583 ns</td><td>2.4825 ns</td><td>1.01</td><td>0.04</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>5</td><td>2.7909 ns</td><td>0.0225 ns</td><td>0.0188 ns</td><td>2.7849 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>5</td><td>2.1674 ns</td><td>0.0619 ns</td><td>0.0579 ns</td><td>2.1833 ns</td><td>0.77</td><td>0.02</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>5</td><td>2.4543 ns</td><td>0.0379 ns</td><td>0.0355 ns</td><td>2.4488 ns</td><td>0.88</td><td>0.02</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>32</td><td>17.3713 ns</td><td>0.3158 ns</td><td>0.2800 ns</td><td>17.2381 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>32</td><td>4.7153 ns</td><td>0.0524 ns</td><td>0.0514 ns</td><td>4.6984 ns</td><td>0.27</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>32</td><td>4.3488 ns</td><td>0.0542 ns</td><td>0.0423 ns</td><td>4.3512 ns</td><td>0.25</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>Current</td><td>64</td><td>31.5755 ns</td><td>0.4968 ns</td><td>0.4404 ns</td><td>31.4325 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOf</td><td>64</td><td>8.0636 ns</td><td>0.3448 ns</td><td>1.0165 ns</td><td>7.3931 ns</td><td>0.24</td><td>0.02</td><td>-</td><td>NA</td>
-</tr><tr><td>SpanIndexOfOpt</td><td>64</td><td>6.6606 ns</td><td>0.0644 ns</td><td>0.0603 ns</td><td>6.6317 ns</td><td>0.21</td><td>0.00</td><td>-</td><td>NA</td>
+</thead><tbody><tr><td>Current</td><td>0</td><td>0.3371 ns</td><td>0.0265 ns</td><td>0.0235 ns</td><td>0.3288 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>0</td><td>0.4514 ns</td><td>0.0419 ns</td><td>0.0997 ns</td><td>0.3963 ns</td><td>1.29</td><td>0.30</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>0</td><td>0.2980 ns</td><td>0.0181 ns</td><td>0.0151 ns</td><td>0.2945 ns</td><td>0.88</td><td>0.08</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>1</td><td>1.2684 ns</td><td>0.0363 ns</td><td>0.0321 ns</td><td>1.2599 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>1</td><td>2.4264 ns</td><td>0.0350 ns</td><td>0.0292 ns</td><td>2.4179 ns</td><td>1.91</td><td>0.06</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>1</td><td>0.8425 ns</td><td>0.0252 ns</td><td>0.0223 ns</td><td>0.8402 ns</td><td>0.66</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>2</td><td>1.5805 ns</td><td>0.0285 ns</td><td>0.0253 ns</td><td>1.5848 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>2</td><td>2.4612 ns</td><td>0.0452 ns</td><td>0.0423 ns</td><td>2.4537 ns</td><td>1.55</td><td>0.03</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>2</td><td>1.1896 ns</td><td>0.0308 ns</td><td>0.0288 ns</td><td>1.1795 ns</td><td>0.75</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>3</td><td>1.9560 ns</td><td>0.0396 ns</td><td>0.0351 ns</td><td>1.9474 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>3</td><td>2.4383 ns</td><td>0.0259 ns</td><td>0.0217 ns</td><td>2.4345 ns</td><td>1.25</td><td>0.03</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>3</td><td>1.7649 ns</td><td>0.0668 ns</td><td>0.1365 ns</td><td>1.7087 ns</td><td>0.93</td><td>0.09</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>4</td><td>2.4116 ns</td><td>0.0322 ns</td><td>0.0269 ns</td><td>2.4042 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>4</td><td>2.4564 ns</td><td>0.0466 ns</td><td>0.0413 ns</td><td>2.4457 ns</td><td>1.02</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>4</td><td>3.6826 ns</td><td>0.0222 ns</td><td>0.0185 ns</td><td>3.6865 ns</td><td>1.53</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>7</td><td>3.9496 ns</td><td>0.1026 ns</td><td>0.2165 ns</td><td>3.8572 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>7</td><td>2.4594 ns</td><td>0.0444 ns</td><td>0.0415 ns</td><td>2.4495 ns</td><td>0.62</td><td>0.04</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>7</td><td>3.6984 ns</td><td>0.0301 ns</td><td>0.0251 ns</td><td>3.7019 ns</td><td>0.92</td><td>0.05</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>8</td><td>4.3865 ns</td><td>0.0602 ns</td><td>0.0533 ns</td><td>4.3872 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>8</td><td>2.8491 ns</td><td>0.0478 ns</td><td>0.0424 ns</td><td>2.8392 ns</td><td>0.65</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>8</td><td>4.1576 ns</td><td>0.0361 ns</td><td>0.0320 ns</td><td>4.1574 ns</td><td>0.95</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>32</td><td>17.2766 ns</td><td>0.2699 ns</td><td>0.2392 ns</td><td>17.2732 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>32</td><td>4.3887 ns</td><td>0.0639 ns</td><td>0.0566 ns</td><td>4.3908 ns</td><td>0.25</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>32</td><td>5.7520 ns</td><td>0.0522 ns</td><td>0.0463 ns</td><td>5.7530 ns</td><td>0.33</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Current</td><td>64</td><td>31.6124 ns</td><td>0.3539 ns</td><td>0.2955 ns</td><td>31.5749 ns</td><td>1.00</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt</td><td>64</td><td>6.6597 ns</td><td>0.0792 ns</td><td>0.0661 ns</td><td>6.6656 ns</td><td>0.21</td><td>0.00</td><td>-</td><td>NA</td>
+</tr><tr><td>SpanIndexOfOpt3</td><td>64</td><td>7.9705 ns</td><td>0.1925 ns</td><td>0.1891 ns</td><td>7.9590 ns</td><td>0.25</td><td>0.01</td><td>-</td><td>NA</td>
 </tr></tbody></table>
 </body>
 </html>
