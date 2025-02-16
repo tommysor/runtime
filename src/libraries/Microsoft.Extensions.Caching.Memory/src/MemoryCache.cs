@@ -443,31 +443,29 @@ namespace Microsoft.Extensions.Caching.Memory
                 return false;
             }
 
-            long sizeRead = coherentState.Size;
-            for (int i = 0; i < 100; i++)
+            long sizeToAdd = entry.Size - (priorEntry?.Size ?? 0);
+            if (sizeToAdd == 0)
             {
-                long newSize = sizeRead + entry.Size;
-                if (priorEntry != null)
-                {
-                    Debug.Assert(entry.Key == priorEntry.Key);
-                    newSize -= priorEntry.Size;
-                }
-
-                if ((ulong)newSize > (ulong)sizeLimit)
-                {
-                    // Overflow occurred, return true without updating the cache size
-                    return true;
-                }
-
-                long original = Interlocked.CompareExchange(ref coherentState._cacheSize, newSize, sizeRead);
-                if (sizeRead == original)
-                {
-                    return false;
-                }
-                sizeRead = original;
+                return false;
             }
 
-            return true;
+            long sizeRead = coherentState.Size;
+            long projectedSize = sizeRead + sizeToAdd;
+            if ((ulong)projectedSize > (ulong)sizeLimit)
+            {
+                // Overflow occurred, return true without updating the cache size
+                return true;
+            }
+
+            long sizeSaved = Interlocked.Add(ref coherentState._cacheSize, sizeToAdd);
+            if ((ulong)sizeSaved > (ulong)sizeLimit)
+            {
+                // Overflow occurred, reset cache size and return true
+                Interlocked.Add(ref coherentState._cacheSize, -sizeToAdd);
+                return true;
+            }
+
+            return false;
         }
 
         private int lockFlag;
